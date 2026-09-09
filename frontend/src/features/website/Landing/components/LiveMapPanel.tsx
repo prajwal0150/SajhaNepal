@@ -1,12 +1,13 @@
 import { useState } from 'react';
-import { ExternalLink, MapPin, Search } from 'lucide-react';
+import { ExternalLink, Search } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { StaticNepalMap } from './StaticNepalMap';
 import { Select } from '@shared/components/Fields';
 import { NEED_TYPES, NEED_TYPE_META, URGENCY_LEVELS } from '@shared/constants';
-import type { NeedType, Urgency, Province } from '@shared/types';
+import type { NeedType, Urgency } from '@shared/types';
 
 const PROVINCES = ['Koshi', 'Madhesh', 'Bagmati', 'Gandaki', 'Lumbini', 'Karnali', 'Sudurpashchim'] as const;
+type Province = (typeof PROVINCES)[number];
 
 export function LiveMapPanel() {
   const [search, setSearch] = useState('');
