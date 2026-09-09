@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #2563eb;
+  --color-primary-dark: #1d4ed8;
+  --color-secondary: #0f766e;
+  --color-tertiary: #7c3aed;
+  --color-critical: #dc2626;
+  --color-warning: #f59e0b;
+  --color-success: #16a34a;
+  --color-surface: #f8fafc;
+  --color-ink: #0f172a;
+  --color-muted: #64748b;
+
+  --font-sans: "Segoe UI", system-ui, "Noto Sans Devanagari", sans-serif;
+}
+
+html {
+  font-family: var(--font-sans);
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-surface text-ink antialiased;
+}
+
+/* Accessibility mode — larger text, stronger focus */
+.a11y-mode {
+  font-size: 1.125rem;
+}
+.a11y-mode *:focus-visible {
+  outline: 3px solid var(--color-primary) !important;
+  outline-offset: 2px;
+}
+
+/* Leaflet container fix */
+.leaflet-container {
+  z-index: 0;
+  border-radius: 0.5rem;
+  font-family: var(--font-sans);
+}
+
+/* Subtle page transitions */
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-up {
+  animation: fade-up 0.25s ease-out;
+}
+
+input[type="date"], input[type="datetime-local"] {
+  min-height: 2.5rem;
+}
+

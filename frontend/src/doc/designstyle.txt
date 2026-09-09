@@ -1,0 +1,16 @@
+| Color         | HEX       | Purpose                       |
+| ------------- | --------- | ----------------------------- |
+| **Primary**   | `#2563EB` | Main brand & actions          |
+| **Secondary** | `#0F766E` | Relief/community coordination |
+| **Tertiary**  | `#7C3AED` | Analytics & special features  |
+| **Accent**    | `#F59E0B` | Attention & warnings          |
+| **Critical**  | `#DC2626` | Emergency                     |
+| **Success**   | `#16A34A` | Verified/resolved             |
+
+no shadows
+rounded-lg
+user friednly 
+use modern animated motion in componets
+clean and professional
+responsive component (web/mobile)
+use infographic diagrams for dashbord/analytics needed pages
