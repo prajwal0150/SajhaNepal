@@ -18,6 +18,7 @@ import landingReducer from '@/features/website/Landing/redux/landingSlice';
 import servicesReducer from '@/features/website/Services/redux/servicesSlice';
 import resourcesReducer from '@/features/website/Resources/redux/resourcesSlice';
 import aboutReducer from '@/features/website/AboutUs/redux/aboutSlice';
+import contactReducer from '@/features/website/Contact/redux/contactSlice';
 import howReducer from '@/features/website/HowItsWork/redux/howSlice';
 import toastReducer from '@shared/redux/toastSlice';
 
@@ -41,6 +42,7 @@ export const rootReducer = combineReducers({
   services: servicesReducer,
   resources: resourcesReducer,
   about: aboutReducer,
+  contact: contactReducer,
   how: howReducer,
   toast: toastReducer,
 });

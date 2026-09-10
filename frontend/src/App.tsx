@@ -3,6 +3,7 @@ import { LandingPage } from "./features/website/Landing/page/landingPage"
 import { ServicesPage } from "./features/website/Services/page/servicesPage"
 import { ResourcesPage } from "./features/website/Resources/page/resourcesPage"
 import { AboutPage } from "./features/website/AboutUs/page/aboutPage"
+import { ContactPage } from "./features/website/Contact/page/contactPage";
 import { HowItsWorkPage } from "./features/website/HowItsWork/page/howPage"
 import { ForgotPasswordPage, LoginPage, ProtectedRoute, RegisterPage, RoleRoute } from "./features/auth"
 import { MyReportsPage, ReportDetailsPage, ReportNeedPage, ReportsPage } from "./features/reports"
@@ -48,6 +49,8 @@ const App = () => {
         <Route path="/resources" element={<ResourcesPage />}/>
         <Route path="/about" element={<AboutPage />}/>
         <Route path="/how-it-works" element={<HowItsWorkPage />}/>
+        <Route path="/contact" element={<ContactPage />}/>
+        <Route path="/contact-us" element={<Navigate to="/contact" replace />}/>
         <Route path="/HowItsWorks" element={<Navigate to="/how-it-works" replace />}/>
         
         </Route>
