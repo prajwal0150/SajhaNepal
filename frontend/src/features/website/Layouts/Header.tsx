@@ -6,18 +6,19 @@ import { WebsiteTopBar } from './TopBar';
 
 const NAV = [
   { to: '/', label: 'Home', end: true },
-  { to: '/map', label: 'Live Map' },
-  { to: '/report', label: 'Report a Need' },
-  { to: '/missing-persons', label: 'Missing Persons' },
-  { to: '/shelters', label: 'Shelters' },
-  { to: '/about', label: 'About' },
+  { to: '/services', label: 'Services' },
+  { to: '/resources', label: 'Resources' },
+  { to: '/how-it-works', label: 'How Its Works' },
+  { to: '/about', label: 'About Us' },
+  { to: '/about', label: 'Contact' },
+  { to: '/about', label: 'Terms' },
 ];
 
 /**
  * Public website header — sticky top alert bar + main navigation.
  * Moved here from Landing/components per the Layouts convention.
  */
-export function LandingHeader() {
+export function Header() {
   const [open, setOpen] = useState(false);
   return (
     <div className="sticky top-0 z-50">
@@ -119,7 +120,5 @@ export function LandingHeader() {
   );
 }
 
-// Backwards-compatible aliases
-export const WebsiteHeader = LandingHeader;
-export const Header = LandingHeader;
-export default LandingHeader;
+
+export default Header;

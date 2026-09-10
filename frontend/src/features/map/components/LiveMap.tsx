@@ -1,6 +1,7 @@
 import { useEffect, useMemo } from 'react';
 import 'leaflet.markercluster/dist/MarkerCluster.Default.css';
 import 'leaflet.markercluster/dist/MarkerCluster.css';
+import '@shared/lib/leafletGlobal'; // installs global `L` for the legacy plugin — must precede its JS import
 import 'leaflet.markercluster/dist/leaflet.markercluster.js';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';

@@ -1,7 +1,10 @@
-import {  Route, Routes } from "react-router-dom"
+import { Navigate, Route, Routes } from "react-router-dom"
 import { LandingPage } from "./features/website/Landing/page/landingPage"
+import { ServicesPage } from "./features/website/Services/page/servicesPage"
+import { ResourcesPage } from "./features/website/Resources/page/resourcesPage"
+import { AboutPage } from "./features/website/AboutUs/page/aboutPage"
+import { HowItsWorkPage } from "./features/website/HowItsWork/page/howPage"
 import { ForgotPasswordPage, LoginPage, ProtectedRoute, RegisterPage, RoleRoute } from "./features/auth"
-import { MapPage } from "./features/website/LiveMap/page/mapPage"
 import { MyReportsPage, ReportDetailsPage, ReportNeedPage, ReportsPage } from "./features/reports"
 import { MissingPersonsPage } from "./features/missingPersons/pages/MissingPersonsPage"
 import { SheltersPage } from "./features/reliefSites/pages/SheltersPage"
@@ -26,6 +29,7 @@ import { HazardsPage as AdminHazardsPage } from "./features/admin/pages/HazardsP
 import { AnalyticsPage as AdminAnalyticsPage } from "./features/admin/pages/AnalyticsPage"
 import { AuditLogsPage as AdminAuditLogsPage } from "./features/admin/pages/AuditLogsPage"
 import { SettingsPage as AdminSettingsPage } from "./features/admin/pages/SettingsPage"
+import WebsiteLayout from "./features/website/Layouts/WebsiteLayout"
 
 
 
@@ -37,12 +41,16 @@ const App = () => {
         {/* =====================================================
             WEBSITE
         ===================================================== */}
-
-        <Route
-          path="/"
-          element={<LandingPage />}
-        />
-
+        <Route element={<WebsiteLayout />} >
+        
+        <Route path="/" element={<LandingPage />}/>
+        <Route path="/services" element={<ServicesPage />}/>
+        <Route path="/resources" element={<ResourcesPage />}/>
+        <Route path="/about" element={<AboutPage />}/>
+        <Route path="/how-it-works" element={<HowItsWorkPage />}/>
+        <Route path="/HowItsWorks" element={<Navigate to="/how-it-works" replace />}/>
+        
+        </Route>
 
         {/* =====================================================
             AUTHENTICATION
@@ -68,10 +76,7 @@ const App = () => {
             PUBLIC MAP / REPORTS / SHELTERS
         ===================================================== */}
 
-        <Route
-          path="/map"
-          element={<MapPage />}
-        />
+     
 
         <Route
           path="/report"

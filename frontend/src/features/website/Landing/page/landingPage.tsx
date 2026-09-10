@@ -1,8 +1,7 @@
 import { CurrentNeedsSection } from '../components/CurrentNeedsSection';
 import { HeroSection, UrgentHelpBanner } from '../components/HeroSection';
 import { HowItWorksSection } from '../components/HowItWorks';
-import { LandingFooter } from '../../Layouts/Footer';
-import { LandingHeader } from '../../Layouts/Header';
+
 import { LiveReliefMapSection } from '../components/LiveReliefMapSection';
 import { RolesSection } from '../components/RolesSection';
 import { SheltersPreview } from '../components/SheltersPreview';
@@ -18,7 +17,7 @@ export function LandingPage() {
 
   return (
     <div className="min-h-screen bg-surface text-ink">
-      <LandingHeader />
+     
       <main>
         <HeroSection />
         <UrgentHelpBanner />
@@ -36,7 +35,7 @@ export function LandingPage() {
           </>
         )}
       </main>
-      <LandingFooter />
+     
     </div>
   );
 }

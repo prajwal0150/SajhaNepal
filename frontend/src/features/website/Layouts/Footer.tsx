@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
  * Public website footer — call-to-action band + dark link columns.
  * Moved here from Landing/components per the Layouts convention.
  */
-export function LandingFooter() {
+export function Footer() {
   return (
     <footer className="mt-6">
       <div className="relative overflow-hidden bg-gradient-to-b from-sky-200 via-sky-100 to-primary/20">
@@ -31,7 +31,7 @@ export function LandingFooter() {
             <p className="text-sm font-bold text-white">Saajha Rahat<br /><span className="text-primary">साझा राहत</span></p>
             <p className="mt-2 leading-relaxed text-white/60">Connecting communities, responders and relief organizations when help matters most.</p>
           </div>
-          <FooterCol title="Platform" links={[['Home', '/'], ['Live Map', '/map'], ['Report a Need', '/report'], ['Missing Persons', '/missing-persons'], ['Shelters', '/shelters']]} />
+          <FooterCol title="Platform" links={[['Home', '/'], ['Services', '/services'], ['Resources', '/resources'], ['Live Map', '/map'], ['Report a Need', '/report'], ['Missing Persons', '/missing-persons'], ['Shelters', '/shelters']]} />
           <FooterCol title="Organizations" links={[['For NGOs', '/register'], ['For Volunteers', '/register'], ['Government', '/login']]} />
           <FooterCol title="Company" links={[['About', '/about'], ['Contact', '/about'], ['Privacy', '/about'], ['Terms', '/about']]} />
           <div>
@@ -74,6 +74,5 @@ function FooterCol({ title, links }: { title: string; links: [string, string][] 
   );
 }
 
-// Backwards-compatible aliases
-export const Footer = LandingFooter;
-export default LandingFooter;
+
+export default Footer;
